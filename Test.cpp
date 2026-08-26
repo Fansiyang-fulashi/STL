@@ -1,6 +1,6 @@
 ﻿#include"vector.h"
 #include<iostream>
-
+#include<string>
 int main()
 {
 	//<1> 分配器
@@ -18,13 +18,71 @@ int main()
 	give.deallocate(a);*/
 
 	//<2> vector
-	vector<int> a;
+	/*vector<int> a;
 	vector<int> b(10, 1);
 	vector<int> c(b.begin(), b.end());
 	vector<int> d = c;
 	vector<int> e = std::move(c);
 	a = b;
-	c = std::move(b);
+	c = std::move(b);*/
+
+
+	/*vector<int> a;
+	a.push_back(1);
+	std::cout << a.size() << std::endl;
+	std::cout << a.capacity() << std::endl;
+	a.erase(a.begin());
+	std::cout << a.size() << std::endl;
+	std::cout << a.capacity() << std::endl;
+	a.shrink_to_fit();
+	std::cout << a.size() << std::endl;
+	std::cout << a.capacity() << std::endl;
+	for (int i = 0; i < 10; i++)
+	{
+		a.push_back(i);
+	}
+	a.insert(a.begin()+4, 22);
+	std::cout << a.size() << std::endl;
+	std::cout << a.capacity() << std::endl;
+	for (auto& i : a)
+	{
+		a.erase(a.begin());
+	}
+	std::cout << a.size() << std::endl;
+	std::cout << a.capacity() << std::endl;
+	a.emplace_back(1);
+	std::cout << a.size() << std::endl;
+	std::cout << a.capacity() << std::endl;
+	a.pop_back();
+	std::cout << a.size() << std::endl;
+	std::cout << a.capacity() << std::endl;
+
+	std::cout << "----------------------" << std::endl;
+	vector<std::string> b;
+	b.push_back("i am shuaige");
+	b.push_back("god");
+	b.emplace_back("ijijijij");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	b.push_back("oppop");
+	for (auto& i : b)
+	{
+		std::cout << i << " ";
+	}
+
+	std::cout << "---------------" << std::endl;
+	vector<vector<std::string>> c;
+	c.push_back(b);*/
+
 
 	//<3> list
 

@@ -28,7 +28,12 @@ public:
 
 	pointer allocate(size_type n)
 	{
-		return static_cast<pointer>(::operator new(n * sizeof(value_type)));
+		pointer p = static_cast<pointer>(::operator new(n * sizeof(value_type)));
+		if (p == nullptr)
+		{
+			throw std::bad_alloc();//里面不能加字符串 不支持
+		}
+		return p;
 	}
 
 	void deallocate(pointer p,size_type) noexcept
