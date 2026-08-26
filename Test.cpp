@@ -1,4 +1,5 @@
 ﻿#include"vector.h"
+#include"list.h"
 #include<iostream>
 #include<string>
 int main()

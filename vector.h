@@ -661,7 +661,7 @@ public:
 	}
 
 	template<class... Args>
-	T& emplace_back(Args&&... args)
+	reference emplace_back(Args&&... args)
 	{
 		if (size() + 1 > capacity())
 		{
