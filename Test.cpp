@@ -86,6 +86,25 @@ int main()
 
 
 	//<3> list
+	list<int> a;
+	a.push_back(1);
+	a.push_back(2);
+	a.push_back(3);
+	a.push_back(1);
+	a.push_back(1);
+	a.push_back(1);
+
+	a.emplace_back(12);
+
+	list<int> b = a;
+	list<int> c = std::move(a);
+
+	auto it = c.begin();
+	while (it != c.end())
+	{
+		std::cout << *it << " ";
+		it++;
+	}
 
 	//<4> AVL平衡树
 
