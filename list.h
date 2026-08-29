@@ -556,7 +556,17 @@ public:
 		erase(--end());
 	}
 
-	//....
+	void splice(iterator pos, list<T, Alloc>& l)
+	{
+		Node* last_node = pos._cur;
+		Node* first_node = pos._cur->_prev;
+		Node* copy_last_node = l.begin()._cur;
+		Node* copy_first_node = l.end()._cur->_prev;
+		first_node->_next = copy_first_node;
+		copy_first_node->_prev = first_node;
+		last_node->_prev = copy_last_node;
+		copy_last_node->_next = last_node;
+	}
 
 private:
 	Node* _head=nullptr;
